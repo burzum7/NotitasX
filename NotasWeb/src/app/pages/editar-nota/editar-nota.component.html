@@ -1,0 +1,24 @@
+<form [formGroup]="formulario" id="example-form" (ngSubmit)="onSubmit1()">
+
+    <h2>Editar Nota</h2>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Título</mat-label>
+        <input type="text" matInput formControlName="inputTitulo" disa>
+    </mat-form-field>
+    <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Estado</mat-label>
+        <mat-select disableRipple formControlName="inputEstado">
+            <mat-option value="1">Iniciado</mat-option>
+            <mat-option value="2">En proceso</mat-option>
+            <mat-option value="3">Terminado</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+
+    <div style="margin:auto;">
+        <button mat-flat-button color="primary" type="submit" routerLink="../lista-notas" (click)="onSubmit1()">Actualizar</button>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#ex-form{
+    padding-top: 30px;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:right;
+    //align-items: center;
+    text-align: center;
+
+}
+  
+.form button {
+    padding: 0.5em 1em;
+    border: none;
+    background: rgb(100, 200, 255);
+    cursor: pointer;
+}
+
+mat-form-field{
+    width: 500px;
+}
