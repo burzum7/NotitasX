@@ -1,6 +1,4 @@
-html{
-    position: fixed;
-}
+
 
 h2{
     text-align: center;
@@ -17,7 +15,7 @@ h2{
 }
 
 .cajas_init {
-    grid-column-start: 1 / 2;
+    grid-column-start: 3 / 4;
     grid-row-start: 2 / 3;
 
     .mat-card{
@@ -25,11 +23,12 @@ h2{
         background-color: rgb(219, 80, 80);
         padding: 20px;
         width: 90%;
+        display: inline-block;
     }
 }
 
 .cajas_proc {
-    grid-column-start: 2 / 3;
+    grid-column-start: 2 / 4;
     grid-row-start: 2 / 3;
 
     .mat-card{
@@ -37,12 +36,12 @@ h2{
         margin: 10px auto 10px;
         background-color: rgb(223, 220, 63);
         width: 90%;
-        
+        display: inline-block;
     }
 }
 
 .cajas_fin {
-    grid-column-start: 3 / 4;
+    grid-column-start: 1 / 4;
     grid-row-start: 2 / 3;
 
     .mat-card{
@@ -50,6 +49,7 @@ h2{
         background-color: rgb(119, 180, 39);
         padding: 20px;
         width: 90%;
+        display: inline-block;
     }
 }
 
@@ -74,6 +74,3 @@ h2{
     width: 120px;
 }
 
-.tarjeta{
-    padding-top: 20px;
-}
