@@ -2,7 +2,7 @@
 
     <h2>Editar Nota</h2>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field appearance="fill">
         <mat-label>Título</mat-label>
         <input type="text" matInput formControlName="inputTitulo" disa>
     </mat-form-field>
@@ -17,6 +17,12 @@
         </mat-select>
     </mat-form-field>
     <br>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Descripición</mat-label>
+        <textarea matInput maxlength="150" formControlName="inputDescripcion"></textarea>
+        
+    </mat-form-field>
 
     <div style="margin:auto;">
         <button mat-flat-button color="primary" type="submit" routerLink="../lista-notas" (click)="onSubmit1()">Actualizar</button>

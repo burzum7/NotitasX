@@ -4,7 +4,7 @@
     
     <mat-form-field appearance="fill">
         <mat-label>Titulo</mat-label>
-        <input type="text" matInput placeholder="Ej: Prueba 1" formControlName="inputTitulo">
+        <input type="text" matInput formControlName="inputTitulo">
     </mat-form-field>
     <br>
 
@@ -20,9 +20,11 @@
 
     <mat-form-field appearance="fill">
         <mat-label>Descripición</mat-label>
-        <textarea matInput id="imputText"></textarea>
+        <textarea matInput maxlength="150" formControlName="inputDescripcion"></textarea>
     </mat-form-field>
     <br>
-    <button mat-flat-button color="primary" type="submit" routerLink="ver-tareas" (click)="onSubmit()">Actualizar</button>
+    
+    <!-- <button mat-flat-button color="accent" type="submit" (click)="onSubmit()">Actualizar</button> -->
+    <button mat-flat-button color="accent" type="submit">Actualizar</button>
     
 </form>

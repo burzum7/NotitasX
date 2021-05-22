@@ -1,3 +1,7 @@
+html{
+    position: fixed;
+}
+
 h2{
     text-align: center;
     padding-top: 20px;
@@ -5,42 +9,47 @@ h2{
 
 .cajas {
     margin: 40px auto;
-    width: 80%;
+    width: 90%;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto;
 }
 
 .cajas_init {
     grid-column-start: 1 / 2;
+    grid-row-start: 2 / 3;
 
     .mat-card{
         margin: 10px auto 10px;
         background-color: rgb(219, 80, 80);
+        padding: 20px;
         width: 90%;
-        height: 50px;
     }
 }
 
 .cajas_proc {
     grid-column-start: 2 / 3;
+    grid-row-start: 2 / 3;
 
     .mat-card{
+        padding: 20px;
         margin: 10px auto 10px;
         background-color: rgb(223, 220, 63);
         width: 90%;
-        height: 50px;
+        
     }
 }
 
 .cajas_fin {
     grid-column-start: 3 / 4;
+    grid-row-start: 2 / 3;
 
     .mat-card{
         margin: 10px auto 10px;
         background-color: rgb(119, 180, 39);
+        padding: 20px;
         width: 90%;
-        height: 50px;
     }
 }
 
@@ -63,4 +72,8 @@ h2{
     display: flex;
     justify-content: center;
     width: 120px;
+}
+
+.tarjeta{
+    padding-top: 20px;
 }

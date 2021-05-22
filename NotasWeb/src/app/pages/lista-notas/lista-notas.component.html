@@ -1,32 +1,71 @@
 <h2>Lista de Notas</h2>
 
 <div class="cajas" >
+
+    
     <div class="cajas_fin">
-        <div *ngFor="let item of notasService.notas">
-            <mat-card *ngIf="item.estado == 3">{{ item.titulo }}</mat-card>
+        <h3>Cerrado</h3>
+        <div class="tarjeta" *ngFor="let item of listaNotas">
+
+            <mat-card *ngIf="item.estado == 3">
+                <mat-card-title>{{ item.titulo }}</mat-card-title>
+                <mat-card-subtitle>{{ item.descripcion }}</mat-card-subtitle>
+
+                <mat-card-actions>
+                    <button style="float:right;" mat-mini-fab color="link" (click)="eliminarNota()">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+
         </div>
     </div>
 
     <div class="cajas_proc">
-        <div *ngFor="let item of notasService.notas">
-            <mat-card *ngIf="item.estado == 2">{{ item.titulo }}</mat-card>
+        <h3>En Proceso</h3>
+
+        <div class="tarjeta" *ngFor="let item of listaNotas">
+
+            <mat-card *ngIf="item.estado == 2">
+                <mat-card-title>{{ item.titulo }}</mat-card-title>
+                <mat-card-subtitle>{{ item.descripcion }}</mat-card-subtitle>
+
+                <mat-card-actions>
+                    <button style="float:right;" mat-mini-fab color="link" routerLink="../editar-nota" (click)="editarNota(item.titulo, item.estado, item.descripcion)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button style="float:right;" mat-mini-fab color="link" (click)="eliminarNota()">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+                
+            </mat-card>
+            <br>
         </div>
     </div>
 
     <div class="cajas_init">
-        <div *ngFor="let item of notasService.notas">
-            <mat-card *ngIf="item.estado == 1">
-                {{ item.titulo }}
-                <button style="float:right;" mat-mini-fab color="link" routerLink="../editar-nota" (click)="editarNota(item.titulo, item.estado)">
-                    <mat-icon>edit</mat-icon>
-                </button>
-            </mat-card>
-        </div>
-    </div>
+        <h3>Abierto</h3>
 
-    <br>
-    <div class="agregarNota">
-        <button mat-raised-button color="accent" routerLink="">Agregar Nota</button>
-    </div>
-    
+        <div class="tarjeta" *ngFor="let item of listaNotas">
+
+            <mat-card *ngIf="item.estado == 1">
+                <mat-card-title>{{ item.titulo }}</mat-card-title>
+                <mat-card-subtitle>{{ item.descripcion }}</mat-card-subtitle>
+                
+                <mat-card-actions>
+                    <button style="float:right;" mat-mini-fab color="link" routerLink="../editar-nota" (click)="editarNota(item.titulo, item.estado, item.descripcion)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button style="float:right;" mat-mini-fab color="link" (click)="eliminarNota()">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>  
 </div>
+
+<app-footer></app-footer>
+<router-outlet></router-outlet>

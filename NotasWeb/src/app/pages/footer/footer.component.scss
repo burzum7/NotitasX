@@ -1,0 +1,26 @@
+.button {
+    font-size: 30px;
+    height: 100px; 
+    width: 100px;
+    border-radius: 50px;
+    border: solid 1px black;
+}
+
+.agregarNota {
+    font-size: 30px;
+    margin: 3rem 10rem 3rem;
+    text-align: left;
+    margin-top: 40px;
+}
+
+footer{
+    position:static;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to right, #ff85e5, #8587ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

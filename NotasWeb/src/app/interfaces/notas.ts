@@ -1,6 +1,6 @@
 export interface Notas {
-    //id:number;
+    id?:string;
     titulo:string;
     estado:number;
-    //descripcion:string;
+    descripcion:string;
 }
